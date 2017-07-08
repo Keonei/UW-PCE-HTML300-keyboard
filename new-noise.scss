@@ -1,0 +1,98 @@
+// @import "normalize";
+@import "variables";
+
+body {
+  background-color: $black;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.instrument {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.note {
+  border: 0.25rem solid currentColor;
+  cursor: pointer;
+  font-size: 3rem;
+  margin: 0 0.25rem;
+  padding: 0;
+  transition: all 0.2s ease;
+
+  height: $note-box-size;
+  width: $note-box-size;
+
+// produces .note:hover and focus as nested
+  &:hover,
+  &:focus {
+    font-size: 3.5rem;
+    outline: none;
+  }
+}
+
+
+.c {
+  background-color: #3e181b;
+  color: #db1d2d;
+
+  &:hover,
+  &:focus {
+    background-color: #661920;
+  }
+
+  &:active {
+    background-color: #db1d2d;
+  }
+}
+
+.d { color: #f0421c; background-color: #422018; }
+.d:hover, .d:focus { background-color: #6e2819; }
+.d:active { background-color: #f0421c; }
+
+.e { color: #fec02d; background-color: #45391b; }
+.e:hover, .e:focus { background-color: #735b20; }
+.e:active { background-color: #fec02d; }
+
+.f { color: #20d071; background-color: #193c29; }
+.f:hover, .f:focus { background-color: #1b613b; }
+.f:active { background-color: #20d071; }
+
+.g { color: #1a9ddb; background-color: #18323e; }
+.g:hover, .g:focus { background-color: #184d65; }
+.g:active { background-color: #1a9ddb; }
+
+.a { color: #a13fad; background-color: #331f35; }
+.a:hover, .a:focus { background-color: #4e2753; }
+.a:active { background-color: #a13fad; }
+
+.b { color: #f26fd4; background-color: #43293d; }
+.b:hover, .b:focus { background-color: #6f3a62; }
+.b:active { background-color: #f26fd4; }
+
+
+html {
+  font: normal normal 16px/1.2 Helvetica, sans-serif;
+}
+
+.notes {
+  border: 2px solid $black;
+  margin: $margins;
+  padding: $margins;
+
+  &:focus,
+  &:hover {
+    background: $pink;
+  }
+
+  &:nth-child(2n) {background: $note-bg-color-alt; }
+
+  .thing {
+    margin: 5rem;
+  }
+
+  + .other_thing { margin: 8rem; }
+}
